@@ -1,0 +1,118 @@
+.about{
+    margin:  100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.about-left{
+    flex-basis: 40%;
+    position: relative;
+}
+.about-right{
+    flex-basis: 56%;
+}
+.about-img{
+    width: 100%;
+    border-radius: 10px;
+}
+.mini-text{
+    color: #fff;
+    background-color: #000;
+    height: 10px;
+    width: auto;
+    padding: 9px;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom-right-radius: 0px;
+}
+.mini-text2{
+    color: rgb(29, 188, 27);
+}
+.play-icon{
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.about h3{
+    font-weight: 600;
+    font-size: 16px;
+    color: #212EA0;
+}
+.about h2{
+ font-size: 35px;
+ color: #000F38;
+ margin: 10px 0;
+ max-width: 400px;
+
+}
+.about p{
+    color: #676767;
+    margin-bottom: 15px;
+}
+
+  .rainbow-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #F5F5DC;
+    border: 1px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    background-size: 200% 200%; /* Increased size for smoother animation */
+    background-image: linear-gradient(
+      to right,
+      #ff0000, /* Red */
+      #ff7f00, /* Orange */
+      #ffff00, /* Yellow */
+      #00ff00, /* Green */
+      #0000ff, /* Blue */
+      #4b0082, /* Indigo */
+      #8b00ff  /* Violet */
+    );
+    animation: rainbow-animation 5s linear infinite;
+    transition: all 0.3s ease; /* For smooth transition to active state */
+  }
+
+  /* Style for when the button IS active (hovered or focused) */
+  .rainbow-button:hover,
+  .rainbow-button:focus {
+    animation: none; /* Stop the rainbow animation */
+    background-image: none; /* Remove the gradient */
+    background-color: #007bff; /* A solid active color */
+    color: white;
+    outline: none; /* Remove default focus outline if desired */
+    transform: scale(1.05); /* Slightly enlarge button on hover/focus */
+  }
+
+  /* Keyframe animation for the rainbow effect */
+  @keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* media query */
+
+  @media (max-width : 800px){
+    .about{
+      flex-direction: column;
+    }
+    .about-left{
+      flex-basis: 100%;
+      margin: 20px;
+      order: 2;
+    }
+    .about-right{
+      flex-basis: 100%;
+    }
+    .mini-text{
+      font-size: 12px;
+    }
+    .mini-text2{
+      font-size: 12px;
+    }
+  }

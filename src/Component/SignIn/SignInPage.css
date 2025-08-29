@@ -1,0 +1,58 @@
+.Scontainer{
+    background-color: black;
+    height: 55vw;
+}
+.Scontent{
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+    position: relative;
+}
+.btn-signin {
+    margin-top: 40px;
+    background-image: linear-gradient(to right, blue, purple);
+    width: 300px;
+    padding: 5px 20px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: #fff;
+    transition: height 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-signin:hover {
+    height: 70px;
+    box-shadow: 0 8px 16px rgba(166, 159, 159, 0.3);
+}
+.Scontent h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.leaf-image{
+    width: auto;
+    height: 100px;
+    margin-top: 20px;
+    position: absolute;
+    top: 35%;
+    right: 38%;
+    z-index:2;
+}
+@media (max-width: 700px){
+    .Scontainer{
+        overflow: hidden;
+        height: 250vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .leaf-image{
+        position: absolute;
+        top: 8.7%;
+        right: 15%;
+
+    }
+}
