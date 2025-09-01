@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext } from "react";
 import { Link } from "react-router-dom"; 
 import "./Navbar.css";
 import logo from "../../assets/edusity_assets/logo.png";
 import menu_icon from "../../assets/edusity_assets/menu-icon.png";
+import { AuthProvider, AuthContext } from "../../AuthContext";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -18,6 +19,8 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const { token, logout , userRole } = useContext(AuthContext);
 
   const togglemenu = () => {
     setmobilemenu(!mobilemenu);
@@ -37,6 +40,20 @@ const Navbar = () => {
           <Link to="/team">Team Members</Link>
         </li>
         <li>
+        <button
+            onClick={logout}
+          >
+            Logout
+          </button>
+          </li>
+          <li>
+            <button
+            >
+             {(userRole === "admin") ? <Link to="/admin" className="btn">Admin</Link> : null}
+            </button>
+          </li>
+        <li>
+
           <Link to="/contact" className="btn">Contact Us</Link>
         </li>
       </ul>

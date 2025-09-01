@@ -10,6 +10,7 @@ import Contact from '../Contact/Contact.jsx'
 import Footer from "../footer/Footer.jsx"
 import Videoplayer from "../videofolder/Videoplayer.jsx"
 import SlidingDisplay from '../slides/SlidingDisplay.jsx'
+import FeaturesPage from '../Features/FeaturesPage.jsx'
 const HomePage = () => {
   const [playState , setPlayState] = useState(false);
 
@@ -20,6 +21,8 @@ const HomePage = () => {
       <div className="container">
       <Title subTitle="Stay Active" title="Slide show"/>
       <SlidingDisplay/>
+      <Title subTitle="Stay Active" title="Slide show"/>
+      <FeaturesPage/>
       <Title subTitle="OUR PROGRAM" title="What we offer"/>
       <Programs/>
       <About setPlayState = {setPlayState}/>

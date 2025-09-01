@@ -1,0 +1,137 @@
+
+.downloads-wrap {
+  padding: 0 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 40px;
+}
+
+.downloads-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #0b0b12;
+}
+
+.downloads-header {
+  margin: 1rem 0 1.25rem;
+}
+.downloads-title {
+  font-size: 28px;
+  margin: 0;
+}
+.downloads-desc {
+  margin: 4px 0;
+  opacity: 0.85;
+  color: #000;
+}
+
+.downloads-filters {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 220px;
+  align-items: center;
+}
+
+.input-basic,
+.select-basic {
+  background: #0f0f0f;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.tag-pill {
+  border-radius: 999px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: #a78bfa;
+  cursor: pointer;
+  font-size: 13px;
+}
+.tag-pill.active {
+  border-color: #a78bfa;
+  background: rgba(167,139,250,0.15);
+}
+
+.results {
+  margin-top: 18px;
+}
+
+.results-empty {
+  padding: 18px 14px;
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #a3a3a3;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+.result-title {
+  font-weight: 600;
+  color: #000;
+}
+.result-meta {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.result-tags {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.result-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #000;
+}
+
+.btn-download {
+  text-decoration: none;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  color: #0b0b12;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.45);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .downloads-filters {
+    grid-template-columns: 1fr;
+  }
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

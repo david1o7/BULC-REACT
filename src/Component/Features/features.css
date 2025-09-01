@@ -1,0 +1,100 @@
+@import url('../slides/SlidingDisplay.css');
+
+.features-page {
+  padding: 0 1rem 2rem;
+}
+
+.features-header {
+  max-width: 1100px;
+  margin: 0 auto 1rem auto;
+  color: #e2e8f0;
+}
+
+.features-header h1 {
+  font-size: 1.875rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.features-header p {
+  opacity: 0.8;
+  margin: 0;
+}
+
+.features-page .sliding-display {
+  background: radial-gradient(1000px 600px at 50% -10%, rgba(99,102,241,0.25), transparent 60%),
+              radial-gradient(800px 500px at 100% 10%, rgba(168,85,247,0.18), transparent 60%),
+              #0b0b12;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.features-page .sliding-container {
+  height: 580px;
+}
+
+.features-page .sliding-content {
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 30px 1rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+  transition: 1.5s;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+}
+.features-page .sliding-content:hover{
+  transform: translateY(-50px);
+  box-shadow: 0 6px 22px rgba(163, 161, 161, 0.35);
+}
+.features-page .sliding-text h2 {
+  letter-spacing: 0.2px;
+}
+
+.features-page .sliding-cta {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  color: #0b0b12;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.45);
+}
+.features-page .sliding-cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+.features-page .sliding-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.features-page .sliding-dots {
+  gap: 6px;
+}
+.features-page .sliding-dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.35);
+}
+.features-page .sliding-dot.active {
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+}
+
+@media (max-width: 768px) {
+  .features-page .sliding-container {
+    height: clamp(320px, 60vh, 700px);
+  }
+  .sliding-cta{
+    font-size: 10px;
+  }
+  .features-page .sliding-content{
+    height: 400px;
+  }
+ .sliding-content .slide-text{
+    font-size: 12px;
+  }
+}
