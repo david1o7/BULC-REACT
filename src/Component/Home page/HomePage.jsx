@@ -21,7 +21,7 @@ const HomePage = () => {
       <div className="container">
       <Title subTitle="Stay Active" title="Slide show"/>
       <SlidingDisplay/>
-      <Title subTitle="Stay Active" title="Slide show"/>
+      <Title subTitle="100lvl: Study Kit" title="100Lvl: Essential Study Materials"/>
       <FeaturesPage/>
       <Title subTitle="OUR PROGRAM" title="What we offer"/>
       <Programs/>
@@ -39,5 +39,6 @@ const HomePage = () => {
     </div>
   )
 }
+
 
 export default HomePage
