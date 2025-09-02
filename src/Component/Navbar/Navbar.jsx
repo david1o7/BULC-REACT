@@ -41,6 +41,7 @@ const Navbar = () => {
         </li>
         <li>
         <button
+          className="btn"
             onClick={logout}
           >
             Logout
@@ -61,5 +62,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
